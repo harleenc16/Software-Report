@@ -9,48 +9,48 @@ The Sita folder is divided into three different folders: Assets, Packages, Proje
 ## Assets: 
 - ArrabicSupport.cs: This is an Open Source File Created by: Abdullah Konash. This File allows the users to use Arabic text in XNA and Unity platform. It flips the characters and replaces them with the appropriate ones to connect the letters in the correct way.
 - ArabicSupport.cs.meta: Contains the metadata for the ArabicSupport video file. 
-FontAwesomeSVGs.meta: Contains the metadata for the font
-Global.meta: Contains the metadata in the app.
-PlayTime.meta: Contains the metadata for playtime.
-Plugins.meta: Contains the metadata for the plugins. 
-Scenes.meta: Contains the metadata for the scene files in the app.
-StreamingAssets.meta: Contains the metadata for the streaming assets of the app. 
-TextMesh Pro.meta: Contains the metadata for the text in the app.
-XR.meta: Contains the metadata. 
-appIcon.meta: Contains the metadata for the icons found in the app. 
+- FontAwesomeSVGs.meta: Contains the metadata for the font
+- Global.meta: Contains the metadata in the app.
+- PlayTime.meta: Contains the metadata for playtime.
+- Plugins.meta: Contains the metadata for the plugins. 
+- Scenes.meta: Contains the metadata for the scene files in the app.
+- StreamingAssets.meta: Contains the metadata for the streaming assets of the app. 
+- TextMesh Pro.meta: Contains the metadata for the text in the app.
+- XR.meta: Contains the metadata. 
+- appIcon.meta: Contains the metadata for the icons found in the app. 
 ### FontAwsomeSVGs: all images and icons used in SITA (like the Settings icon)
-Arrow-alt-circle-left.svg: image in the folder for the arrow that points left. 
-Arrow-alt-circle-left.svg.meta: metadata in the folder for the arrow that points left. 
-Home.svg: the home icon image in the folder.
-Home.svg.meta: the metadata in the folder for the home icon image . 
-icons8-play-30.png: the play icon image in the folder.
-icons8-play-30.png.meta: the metadata in the folder for the play icon image. 
-Play-button-image-background-arts-symbol-sign-tape-road-sign-transparent-png-2172104.png: The play button icon image in the folder. 
-Play-button-image-background-arts-symbol-sign-tape-road-sign-transparent-png-2172104.png.meta: the metadata in the folder for the play icon image. 
-Question-circle.svg: the question circle icon image for help in the folder.
-Question-circle.svg.meta: the metadata in the folder for the question icon image. 
-Star.svg: the star icon image in the folder.
-Star.svg.meta: the metadata in the folder for the star icon image. 
-Sun.svg.meta: the sun icon image in the folder.
-Sun.svg.meta: the sun icon metadata in the folder.
+- Arrow-alt-circle-left.svg: image in the folder for the arrow that points left. 
+- Arrow-alt-circle-left.svg.meta: metadata in the folder for the arrow that points left. 
+- Home.svg: the home icon image in the folder.
+- Home.svg.meta: the metadata in the folder for the home icon image . 
+- icons8-play-30.png: the play icon image in the folder.
+- icons8-play-30.png.meta: the metadata in the folder for the play icon image. 
+- Play-button-image-background-arts-symbol-sign-tape-road-sign-transparent-png-2172104.png: The play button icon image in the folder. 
+- Play-button-image-background-arts-symbol-sign-tape-road-sign-transparent-png-2172104.png.meta: the metadata in the folder for the play icon image. 
+- Question-circle.svg: the question circle icon image for help in the folder.
+- Question-circle.svg.meta: the metadata in the folder for the question icon image. 
+- Star.svg: the star icon image in the folder.
+- Star.svg.meta: the metadata in the folder for the star icon image. 
+- Sun.svg.meta: the sun icon image in the folder.
+- Sun.svg.meta: the sun icon metadata in the folder.
 ### Global: all information that is shared across SITA (algorithm files, scenes manager, etc). 
-Envelope.cs: Envelope file for the speech recognition algorithm. It has a Class for storing RMS envelope history from buffers. It Saves buffer's envelope samples, princesses samples, handles full chunks, saves that envelope, goes to the next envelope sample and resets the chunk state. It then unwraps the envelope and normalizes the sample. 
-Envelope.cs.meta: The metadata in the folder for the envelope.cs file. 
-GlobalTimer.cs:  returns the number of midnights passed since the date stored in the LastDateChildsCornerOpen PlayerPref. Resets the DailyChildTime PlayerPref to 0, called when midnight is passed.
-GlobalTimer.cs.meta: The metadata in the folder for the global timer.cs file. 
-ManageScenes.cs: Simple class for calling SceneManager Methods via GameObjects.
-Managescenes.cs.meta: The metadata in the folder for the mange scenes.cs file. 
-MessageBox.cs: Displays the message in the box, and is the driver code for the messagebox.prefab file. The message box is for user and error warnings. 
-MessageBox.prefab: The prefab file for the message box for errors and warnings. 
-MessageBox.prefab.meta: The metadata in the folder for the message box file.
-SceneManager.prefab: Prefab file for Unity for the scene manager. 
-SceneManager.prefab.meta: The metadata for the scene manager file. 
-Speech.cs: The main speech file in the app. Controls and handles the functions with the volume in the app. It converts between decibel and linear scales, and gets accuracy using minimum error. Accuracy normalized to a max in range [0.0f,1.0f], normalizes a buffer (for audio samples). It also normalizes positives, and handles min and max normalization for analytical signals in range [0,1]. Takes care of sliding window error in the volume and normalizes the error to 1. 
-Speech.cs.meta: The metadata in the global folder for the speech file.  
-SpeechParams.cs: Static class for storing global speech processing variables.
-SpeechParams.cs.meta: The metadata in the global folder for the speech params file.
+- Envelope.cs: Envelope file for the speech recognition algorithm. It has a Class for storing RMS envelope history from buffers. It Saves buffer's envelope samples, princesses samples, handles full chunks, saves that envelope, goes to the next envelope sample and resets the chunk state. It then unwraps the envelope and normalizes the sample. 
+- Envelope.cs.meta: The metadata in the folder for the envelope.cs file. 
+- GlobalTimer.cs:  returns the number of midnights passed since the date stored in the LastDateChildsCornerOpen PlayerPref. Resets the DailyChildTime PlayerPref to 0, called when midnight is passed.
+- GlobalTimer.cs.meta: The metadata in the folder for the global timer.cs file. 
+- ManageScenes.cs: Simple class for calling SceneManager Methods via GameObjects.
+- Managescenes.cs.meta: The metadata in the folder for the mange scenes.cs file. 
+- MessageBox.cs: Displays the message in the box, and is the driver code for the messagebox.prefab file. The message box is for user and error warnings. 
+- MessageBox.prefab: The prefab file for the message box for errors and warnings. 
+- MessageBox.prefab.meta: The metadata in the folder for the message box file.
+- SceneManager.prefab: Prefab file for Unity for the scene manager. 
+- SceneManager.prefab.meta: The metadata for the scene manager file. 
+- Speech.cs: The main speech file in the app. Controls and handles the functions with the volume in the app. It converts between decibel and linear scales, and gets accuracy using minimum error. Accuracy normalized to a max in range [0.0f,1.0f], normalizes a buffer (for audio samples). It also normalizes positives, and handles min and max normalization for analytical signals in range [0,1]. Takes care of sliding window error in the volume and normalizes the error to 1. 
+- Speech.cs.meta: The metadata in the global folder for the speech file.  
+- SpeechParams.cs: Static class for storing global speech processing variables.
+- SpeechParams.cs.meta: The metadata in the global folder for the speech params file.
 ### Playtime: all the  information about game rewards
-Audio.meta: The metadata file for the audio in the app. 
+- Audio.meta: The metadata file for the audio in the app. 
 ### Plugins: additional plugins needed to help build and run SITA. 
 Android.meta: The metadata in the plugins folder for android installation. 
 ### Android: Android folder. 
