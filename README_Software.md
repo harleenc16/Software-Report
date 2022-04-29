@@ -52,11 +52,11 @@ The Sita folder is divided into three different folders: Assets, Packages, Proje
 ### Playtime: all the  information about game rewards
 - Audio.meta: The metadata file for the audio in the app. 
 ### Plugins: additional plugins needed to help build and run SITA. 
-Android.meta: The metadata in the plugins folder for android installation. 
+- Android.meta: The metadata in the plugins folder for android installation. 
 ### Android: Android folder. 
-AndroidManifest.xml: xml file in the android folder for the android build. 
-AndroidManifest.xml.meta: The metadata in the android folder for the android build.  
-NativeCamera.meta: The metadata in the plugins folder for the native camera used to record videos from the therapist and upload them. 
+- AndroidManifest.xml: xml file in the android folder for the android build. 
+- AndroidManifest.xml.meta: The metadata in the android folder for the android build.  
+- NativeCamera.meta: The metadata in the plugins folder for the native camera used to record videos from the therapist and upload them. 
 ### NativeCamera: The native camera folder in the app. This plugin helps you take pictures/record videos natively with your device's camera on Android & iOS.
 1. ABOUT
 This plugin helps you take pictures/record videos natively with your device's camera on Android & iOS.
@@ -115,16 +115,15 @@ bool NativeCamera.IsCameraBusy(); // returns true if the camera is currently ope
 
 Runtime Permissions: 
 
-// Accessing the camera is only possible when the permission state is Permission.Granted. TakePicture and RecordVideo functions request permission internally (and return the result) but you can also check/request the permissions manually
+Accessing the camera is only possible when the permission state is Permission.Granted. TakePicture and RecordVideo functions request permission internally (and return the result) but you can also check/request the permissions manually
 NativeCamera.Permission NativeCamera.CheckPermission();
 NativeCamera.Permission NativeCamera.RequestPermission();
-
-// If the permission state is Permission.Denied, user must grant the necessary permission(s) manually from the Settings (Android requires Storage and, if declared in AndroidManifest, Camera permissions; iOS requires Camera permission). These functions help you open the Settings directly from within the app
+ If the permission state is Permission.Denied, user must grant the necessary permission(s) manually from the Settings (Android requires Storage and, if declared in AndroidManifest, Camera permissions; iOS requires Camera permission). These functions help you open the Settings directly from within the app
 void NativeCamera.OpenSettings();
 bool NativeCamera.CanOpenSettings();
 
 
-//// Utility Functions ////
+ Utility Functions:
 
 // Creates a Texture2D from the specified image file in correct orientation and returns it. Returns null, if something goes wrong
 // maxSize: determines the maximum size of the returned Texture2D in pixels. Larger textures will be down-scaled. If untouched, its value will be set to SystemInfo.maxTextureSize. It is recommended to set a proper maxSize for better performance
@@ -144,14 +143,14 @@ NativeCamera.ImageProperties NativeCamera.GetImageProperties( string imagePath )
 
 // Returns a VideoProperties instance that holds the width, height, duration (in milliseconds) and rotation information of a video file. To play a video in correct orientation, you should rotate it by rotation degrees clockwise. For a 90-degree or 270-degree rotated video, values of width and height should be swapped to get the display size of the video
 NativeCamera.VideoProperties NativeCamera.GetVideoProperties( string videoPath );
-(Folder)- Android, Editor, iOS. 
-Android.meta: The metadata for the android native camera in the folder. 
-Editor.meta: The medata for the editor in the app. 
-NativeCamera.Runtime.asmdef: Native camera runtime file.
-NativeCamera.Runtime.asmdef.meta: The metadata file for the native runtime file. 
-NativeCamera.cs: The cs file for the native camera installed on the phone and lets the app connect the camera to the app. 
-NativeCamera.cs.meta: The metadata file in the folder for the native camera.
-iOS.meta: the iOS metadata file in the folder. 
+### (Folder)- Android, Editor, iOS. 
+- Android.meta: The metadata for the android native camera in the folder. 
+- Editor.meta: The medata for the editor in the app. 
+- NativeCamera.Runtime.asmdef: Native camera runtime file.
+- NativeCamera.Runtime.asmdef.meta: The metadata file for the native runtime file. 
+- NativeCamera.cs: The cs file for the native camera installed on the phone and lets the app connect the camera to the app. 
+- NativeCamera.cs.meta: The metadata file in the folder for the native camera.
+- iOS.meta: the iOS metadata file in the folder. 
 ### Native Gallery: 
 
 1. ABOUT
@@ -298,145 +297,145 @@ NativeGallery.cs: The cs file for the native gallery installed on the phone and 
 NativeGallery.cs.meta: The metadata file in the folder for the native camera.
 iOS.meta: the iOS metadata file in the folder. 
 ### iOS: The iOS folder in the app for the plugins. 
-iPhoneSpeaker.h, iPhoneSpeaker.h.meta, iPhoneSpeaker.m, iPhoneSpeaker.m.meta, iPhoneSpeaker.cs, iPhoneSpeaker.cs.meta : the iPhone speaker files and metadata in the folder. 
+- iPhoneSpeaker.h, iPhoneSpeaker.h.meta, iPhoneSpeaker.m, iPhoneSpeaker.m.meta, iPhoneSpeaker.cs, iPhoneSpeaker.cs.meta : the iPhone speaker files and metadata in the folder. 
 ### Scenes: The folder for the scenes in the app. 
-ActivityLog.meta: The metadata for the activity log in the scenes folder. 
-Exercises.meta: The metadata for the exercises in the scenes folder. 
-Help.meta: The metadata for the help in the scenes folder. 
-Home.meta: The metadata for the help in the scenes folder. 
-Onboarding.meta: The metadata for the onboarding in the scenes folder. 
-ParentLock.meta: The metadata for the parent lock in the scenes folder. 
-Recorder.meta: The metadata for the recorder in the scenes folder. 
-Settings.meta: The metadata for the settings in the scenes folder. 
+- ActivityLog.meta: The metadata for the activity log in the scenes folder. 
+- Exercises.meta: The metadata for the exercises in the scenes folder. 
+- Help.meta: The metadata for the help in the scenes folder. 
+- Home.meta: The metadata for the help in the scenes folder. 
+- Onboarding.meta: The metadata for the onboarding in the scenes folder. 
+- ParentLock.meta: The metadata for the parent lock in the scenes folder. 
+- Recorder.meta: The metadata for the recorder in the scenes folder. 
+- Settings.meta: The metadata for the settings in the scenes folder. 
 ### ActivityLog: the activity log folder. 
-ActivityLog.unity: The unity file extension for the activity log file.
-ActivityLog.unity.meta: The activity log metadata file. 
-AddActivity.cs: The cs file to add activities in the activity log. 
-AddActivity.cs.meta: The metadata file to add more activities in the app. 
+- ActivityLog.unity: The unity file extension for the activity log file.
+- ActivityLog.unity.meta: The activity log metadata file. 
+- AddActivity.cs: The cs file to add activities in the activity log. 
+- AddActivity.cs.meta: The metadata file to add more activities in the app. 
 ### Exercises: 
-ChildTimer.cs: The cs file that handles the timer for the child video. 
-ChildTimer.cs.meta: The metadata file for the child timer cs file.
-ChildVideo.cs: The child video CS file, loads VideoMetadata and updates the proficiency bar fill amount. 
-ChildVideo.cs.meta: The metadata file for the child video cs file. 
-ChildVideo.prefab: The .prefab file for the child video. 
-ChildVideo.prefab.meta: The metadata for the prefab file of the child video. 
-ChildVideoManager.cs: Manages the video of the child. Handles the current word, and gets the next word from the exercise scene. It also adds to the proficiency value of the given VideoMetadata struct. 
-ChildVideoManager.cs.meta: The metadata for the child video manager. 
-ExerciseBar.cs: The file for the progress bar that also emits particles on special events. It reacts to a user input given strength, updates progress bar size and changes scrollbar size. 
-ExerciseBar.cs.meta: The metadata for the exercise bar file. 
-Exercises.unity: The unity file for the exercises in the app. 
-Exercises.unity.meta: The metadata for the exercises in the app. 
-EyeTrackers.meta: The metadata file for the eye trackers in the app. 
-FaceMasks.meta: The metadata file for the facemasks in the app. 
-Mic.cs: This file contains the class for capturing and processing envelopes from the microphone. It starts recording audio buffers, updates mic timings, gets the score of the internal envelope with respect to a model word and calls at the end of each replay. It gets envelope and envelope score and processes the buffer. It is set to the lowest sampling rate and gets a buffer every 0.25 secs, starts mic, and processes buffers. 
-Mic.cs.meta: The metadata file for the mic. 
-ModifiedVideoPlayer.cs: It is the driver code for the mic files in the folder. It has instructions such as give it your best shot, repeat after me, etc. 
-ModifiedVideoPlayer.cs.meta: The metadata file for the modified video player instructions. 
-ModifiedVideoPlayer.prefab: The prefab file for the modified video player instructions. 
-ModifiedVideoPlayer.prefab.meta: The metadata file for the modified video player instructions.
-ProficiencyBar.png: The proficiency bar image in the folder. 
-ProficiencyBar.png.meta: The metadata for the  proficiency bar image in the folder.
-RewardsButton.cs: This has the driver Code for RewardsButton in Exercises Scene.
-RewardsButton.cs.meta: The metadata file for the rewards button file. 
-SITA_Instructions.meta: The metadata file for the instructions. 
-NativeGallery.meta: The metadata in the plugins folder for the native gallery where you can choose previous videos from the gallery. 
+- ChildTimer.cs: The cs file that handles the timer for the child video. 
+- ChildTimer.cs.meta: The metadata file for the child timer cs file.
+- ChildVideo.cs: The child video CS file, loads VideoMetadata and updates the proficiency bar fill amount. 
+- ChildVideo.cs.meta: The metadata file for the child video cs file. 
+- ChildVideo.prefab: The .prefab file for the child video. 
+- ChildVideo.prefab.meta: The metadata for the prefab file of the child video. 
+- ChildVideoManager.cs: Manages the video of the child. Handles the current word, and gets the next word from the exercise scene. It also adds to the proficiency value of the given VideoMetadata struct. 
+- ChildVideoManager.cs.meta: The metadata for the child video manager. 
+- ExerciseBar.cs: The file for the progress bar that also emits particles on special events. It reacts to a user input given strength, updates progress bar size and changes scrollbar size. 
+- ExerciseBar.cs.meta: The metadata for the exercise bar file. 
+- Exercises.unity: The unity file for the exercises in the app. 
+- Exercises.unity.meta: The metadata for the exercises in the app. 
+- EyeTrackers.meta: The metadata file for the eye trackers in the app. 
+- FaceMasks.meta: The metadata file for the facemasks in the app. 
+- Mic.cs: This file contains the class for capturing and processing envelopes from the microphone. It starts recording audio buffers, updates mic timings, gets the score of the internal envelope with respect to a model word and calls at the end of each replay. It gets envelope and envelope score and processes the buffer. It is set to the lowest sampling rate and gets a buffer every 0.25 secs, starts mic, and processes buffers. 
+- Mic.cs.meta: The metadata file for the mic. 
+- ModifiedVideoPlayer.cs: It is the driver code for the mic files in the folder. It has instructions such as give it your best shot, repeat after me, etc. 
+- ModifiedVideoPlayer.cs.meta: The metadata file for the modified video player instructions. 
+- ModifiedVideoPlayer.prefab: The prefab file for the modified video player instructions. 
+- ModifiedVideoPlayer.prefab.meta: The metadata file for the modified video player instructions.
+- ProficiencyBar.png: The proficiency bar image in the folder. 
+- ProficiencyBar.png.meta: The metadata for the  proficiency bar image in the folder.
+- RewardsButton.cs: This has the driver Code for RewardsButton in Exercises Scene.
+- RewardsButton.cs.meta: The metadata file for the rewards button file. 
+- SITA_Instructions.meta: The metadata file for the instructions. 
+- NativeGallery.meta: The metadata in the plugins folder for the native gallery where you can choose previous videos from the gallery. 
 ### SITA_Instructions: contains the mp3 for the instructions in the app. 
-GiveItYourBestShot.mp3: “Give it your best shot” sound. 
-GiveItYourBestShot.mp3.meta: The metadata in the folder for the sound “give it your best shot”. 
-NowItsYourTurn.mp3: “Now it’s your turn” sound.
-NowItsYourTurn.mp3.meta: The metadata in the folder for the sound “now it’s your turn”. 
-NowYouTryIt.mp3: “Now you try it” sound.
-NowYouTryIt.mp3.meta: The metadata in the folder for the sound “now you try it”. 
-RepeatAfterMe.mp3: “Repeat after me” sound. 
-RepeatAfterMe.mp3.meta: The metadata in the folder for the sound “repeat after me”. 
+- GiveItYourBestShot.mp3: “Give it your best shot” sound. 
+- GiveItYourBestShot.mp3.meta: The metadata in the folder for the sound “give it your best shot”. 
+- NowItsYourTurn.mp3: “Now it’s your turn” sound.
+- NowItsYourTurn.mp3.meta: The metadata in the folder for the sound “now it’s your turn”. 
+- NowYouTryIt.mp3: “Now you try it” sound.
+- NowYouTryIt.mp3.meta: The metadata in the folder for the sound “now you try it”. 
+- RepeatAfterMe.mp3: “Repeat after me” sound. 
+- RepeatAfterMe.mp3.meta: The metadata in the folder for the sound “repeat after me”. 
  ### Help: The help options folder in the app. 
-Help.unity: The onboarding unity file for help. 
-Help.unity.meta: The metadata file for help. 
-HelpSettings.lighting: The help settings file. 
-HelpSettings.lighting.meta: The metadata for the help settings file. 
+- Help.unity: The onboarding unity file for help. 
+- Help.unity.meta: The metadata file for help. 
+- HelpSettings.lighting: The help settings file. 
+- HelpSettings.lighting.meta: The metadata for the help settings file. 
 ### Home: The home folder in the app. 
-Home.unity: The onboarding unity file for home. 
-Home.unity.meta: The metadata file for home. 
-HomeManager.cs: The driver code the the UI of the home screen in the app. 
-HomeManager.cs.meta: The metadata file for the UI of the home screen. 
+- Home.unity: The onboarding unity file for home. 
+- Home.unity.meta: The metadata file for home. 
+- HomeManager.cs: The driver code the the UI of the home screen in the app. 
+- HomeManager.cs.meta: The metadata file for the UI of the home screen. 
 ### Onboarding: The onboarding folder in the app. 
-Onboarding.unity: The onboarding unity file for the onboarding. 
-Onboarding.unity.meta: The metadata file for onboarding. 
-OnbaordingManager.cs: The driver code the the UI of the onboarding in the app. 
-Onboarding Manager.vs.meta: The metadata file for the UI of the onboarding screen. 
+- Onboarding.unity: The onboarding unity file for the onboarding. 
+- Onboarding.unity.meta: The metadata file for onboarding. 
+- OnbaordingManager.cs: The driver code the the UI of the onboarding in the app. 
+- Onboarding Manager.vs.meta: The metadata file for the UI of the onboarding screen. 
 ### ParentLock: The parent lock folder in the app. 
-ParentLock.unity: The parent lock unity file. 
-ParentLock.unity.meta: The metadata file for the parent lock. 
-ParentLock.cs: The main cs file that generates the code randomly and checks for the correct code entered. 
-ParentLock.cs.meta: The metadata file for the parent lock. 
-ParentLockSettings.lighting: The lightning app for the parent lock. 
+- ParentLock.unity: The parent lock unity file. 
+- ParentLock.unity.meta: The metadata file for the parent lock. 
+- ParentLock.cs: The main cs file that generates the code randomly and checks for the correct code entered. 
+- ParentLock.cs.meta: The metadata file for the parent lock. 
+- ParentLockSettings.lighting: The lightning app for the parent lock. 
 ### Recorder: Has the video recorder files.
-AddVideoWizard.cs: Contains the driver class for Add Video prefab
-AddVideoWizard.cs.meta: The metadata file for the add video wizard.
-ParentVideo.cs: Driver Code attached to each ParentVideo prefab.
-ParentVideo.cs.meta: The metadata file for the parent video file. 
-ParentVideo.prefab: The main parent video driver code prefab file.
-ParentVideo.prefab.meta: The metadata for the files listed above. 
-ParentVideoManager.cs: Manages the parent video file.
-ParentVideoManager.cs.meta:  The metadata file for the parent video manager. 
-Recorder.unity: The recorder unity file.  
-Recorder.unity.meta: The metadata file for the recorder unity file.
-RecorderSettings.lighting: The lightning file for recorder settings. 
-RecorderSettings.lighting.meta: The metadata for the recorder settings lighting file in the folder.
-VideoAdder.cs: The cs file that lets users add more videos to the recorder folder. 
-VideoAdder.cs.meta: The metadata file for the video adder cs file.
-VideoAdder_VideoReplay.prefab: This is the prefab file for the video adder file. 
-VideoAdder_VideoReplay.prefab.meta: The metadata file for the file listed above. 
-VideoReplay.cs: The video replay file that lets the user to replay the videos previously uploaded in the folder. 
-VideoReplay.cs.meta: The metadata file for the video replay file.
+- AddVideoWizard.cs: Contains the driver class for Add Video prefab
+- AddVideoWizard.cs.meta: The metadata file for the add video wizard.
+- ParentVideo.cs: Driver Code attached to each ParentVideo prefab.
+- ParentVideo.cs.meta: The metadata file for the parent video file. 
+- ParentVideo.prefab: The main parent video driver code prefab file.
+- ParentVideo.prefab.meta: The metadata for the files listed above. 
+- ParentVideoManager.cs: Manages the parent video file.
+- ParentVideoManager.cs.meta:  The metadata file for the parent video manager. 
+- Recorder.unity: The recorder unity file.  
+- Recorder.unity.meta: The metadata file for the recorder unity file.
+- RecorderSettings.lighting: The lightning file for recorder settings. 
+- RecorderSettings.lighting.meta: The metadata for the recorder settings lighting file in the folder.
+- VideoAdder.cs: The cs file that lets users add more videos to the recorder folder. 
+- VideoAdder.cs.meta: The metadata file for the video adder cs file.
+- VideoAdder_VideoReplay.prefab: This is the prefab file for the video adder file. 
+- VideoAdder_VideoReplay.prefab.meta: The metadata file for the file listed above. 
+- VideoReplay.cs: The video replay file that lets the user to replay the videos previously uploaded in the folder. 
+- VideoReplay.cs.meta: The metadata file for the video replay file.
 ### Settings: The home folder in the app. 
-Settings.unity: The settings unity file. 
-Settings.unity.meta: The metadata file for settings of the app. 
-SettingsEditor.cs: The cs file for the settings that lets the user change the settings of the app. This includes settings such as volume, number of repeats of each video, etc. 
-SettingsEditor.cs.meta: The metadata file for the settings file. 
+- Settings.unity: The settings unity file. 
+- Settings.unity.meta: The metadata file for settings of the app. 
+- SettingsEditor.cs: The cs file for the settings that lets the user change the settings of the app. This includes settings such as volume, number of repeats of each video, etc. 
+- SettingsEditor.cs.meta: The metadata file for the settings file. 
 ### StreamingAssets: The streaming assets folder. Contains buildinfo and the metadata for that file. 
-### TextMeshPro: 
-Documentation.meta
-Examples & Extras.meta: 
-Fonts.meta: the metadata for the fonts file.
-Resources.meta: the resources metadata file.
-Shaders.meta: the shaders metadata file. 
-Sprites.meta: the sprites metadata file
+### TextMeshPro: The texts mesh folder
+- Documentation.meta: The metadata file for the documentation
+- Examples & Extras.meta: The example and extra metadata file. 
+- Fonts.meta: the metadata for the fonts file.
+- Resources.meta: the resources metadata file.
+- Shaders.meta: the shaders metadata file. 
+- Sprites.meta: the sprites metadata file
 ### XR: contains code necessary for AR portion
-Loaders.meta: the loader metadata file.
-Settings.meta: the settings metadata file.
-XRGeneralSettings.asset: the XR settings asset file.
-XRGeneralSettings.asset.meta: the metadata file for the XR general settings.
+- Loaders.meta: the loader metadata file.
+- Settings.meta: the settings metadata file.
+- XRGeneralSettings.asset: the XR settings asset file.
+- XRGeneralSettings.asset.meta: the metadata file for the XR general settings.
 ### appIcon:
-SITA1024.png: The main SITA logo image.
-SITA1024.png.meta: The metadata for the main SITA logo. 
-ParentLockSettings.lighting.meta: The metadata for the parent lock settings. 
-iOS.meta: The metadata in the plugins folder for the iOS build. 
+- SITA1024.png: The main SITA logo image.
+- SITA1024.png.meta: The metadata for the main SITA logo. 
+- ParentLockSettings.lighting.meta: The metadata for the parent lock settings. 
+- iOS.meta: The metadata in the plugins folder for the iOS build. 
 ## Packages: JSON files for native camera gallery and native camera. 
 ## ProjectSettings: The .asset files for the project settings. 
-AndroidLogcatSettings.asset
-AudioManager.asset
-DeviceSimulatorSettings.asset
-ClusterInputManager.asset
-EditorBuildSettings.asset
-EditorSettings.asset
-GraphicsSettings.asset
-InputManager.asset
-NavMeshAreas.asset
-NetworkManager.asset
-PackageManagerSettings.asset
-Physics2DSettings.asset
-PresetManager.asset
-ProjectSettings.asset
-ProjectVersion.txt
-QualitySettings.asset
-TagManager.asset
-TimeManager.asset
-UnityConnectSettings.asset
-VFXManager.asset
-VersionControlSettings.asset
-XRPackageSettings.asset
-XRSettings.asset
+- AndroidLogcatSettings.asset
+- AudioManager.asset
+- DeviceSimulatorSettings.asset
+- ClusterInputManager.asset
+- EditorBuildSettings.asset
+- EditorSettings.asset
+- GraphicsSettings.asset
+- InputManager.asset
+- NavMeshAreas.asset
+- NetworkManager.asset
+- PackageManagerSettings.asset
+- Physics2DSettings.asset
+- PresetManager.asset
+- ProjectSettings.asset
+- ProjectVersion.txt
+- QualitySettings.asset
+- TagManager.asset
+- TimeManager.asset
+- UnityConnectSettings.asset
+- VFXManager.asset
+- VersionControlSettings.asset
+- XRPackageSettings.asset
+- XRSettings.asset
 
 # SetUp 
 
