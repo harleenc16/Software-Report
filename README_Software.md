@@ -7,8 +7,8 @@ The Sita folder is divided into three different folders: Assets, Packages, Proje
 ## ProjectSettings: contains files that shape SITA’s user interface. It determines how things are placed, sized, and formatted within the application. Ideally, you will be editing the user interface directly in Unity, and the changes will automatically be reflected in these files upon saving.
 
 ## Assets: 
-ArrabicSupport.cs: This is an Open Source File Created by: Abdullah Konash. This File allows the users to use Arabic text in XNA and Unity platform. It flips the characters and replaces them with the appropriate ones to connect the letters in the correct way.
-ArabicSupport.cs.meta: Contains the metadata for the ArabicSupport video file. 
+- ArrabicSupport.cs: This is an Open Source File Created by: Abdullah Konash. This File allows the users to use Arabic text in XNA and Unity platform. It flips the characters and replaces them with the appropriate ones to connect the letters in the correct way.
+- ArabicSupport.cs.meta: Contains the metadata for the ArabicSupport video file. 
 FontAwesomeSVGs.meta: Contains the metadata for the font
 Global.meta: Contains the metadata in the app.
 PlayTime.meta: Contains the metadata for playtime.
