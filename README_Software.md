@@ -438,43 +438,41 @@ VersionControlSettings.asset
 XRPackageSettings.asset
 XRSettings.asset
 
-## SetUp
-End-user installation and setup:
-Download the SITA iOS application from the Apple Store.
-Open the app and go into therapist mode.
-Input the correct code.
-Click the settings icon on the bottom left and personalize settings as desired Default settings are the following:
-Exercises per reward: 3
-Max playtime reward: 20
-Repeats: 10
-Instruction volume: -20 dB
-Exercise start volume: -5 dB
-Target score: 50
-Playtime theme: Animals
-Parent Lock: ON
-To record the first exercise, click: “Add Exercise”. Read the instructions and hit “Continue”. Enter a name for the exercise and then give SITA permission to access the phone’s microphone and camera.
-Admin (developers) installation and setup:
-Download Unity version 2020.1.8f and the iOS extension.
-Download Xcode.
-Clone the SITA repository in your local machine and open the project on Unity
-In build settings select iOS as the platform and “Latest version” in the “Run in Xcode” dropdown. Additionally, select run in Xcode as “Release”.
-Click on “Build” and select a folder to save the build file to a location on your disk.
-Upon successful completion of the build on Unity, open the project in Xcode and connect an iPhone to the computer.
-Select the iphone “Unity-Iphone > Device Name” at the top of the Xcode screen next to the build symbol.
-Click on Unity-iPhone in the Project Navigator, and then click on Signing & Capabilities. Under All, check “Automatically manage signing,” as this will handle all of the Signing Certificates and Provisioning Profiles that are necessary to build to the device.
-Next, log into the Apple Developer account associated with this project and select ImagiRation LLC under the Team dropdown. Once this is complete, unlock your iPhone, build the project using the Play button, and it will run on your device.
-If desired the app can be internally tested through Testflight:
-In Xcode, open the project and make sure the target is set to Unity-iPhone.
-Under Signing & Capabilities, add the Push Notifications capability.
-Under General, increment the Build number by 1. For example, if the build number is set at 042, change it to 043.
-In the Product dropdown menu at the top of the screen, click on “Archive”. Xcode will now begin archiving the project; this is a necessary step for uploading the app to TestFlight.
-Upon successful completion of archiving the app, a dialog box pops up (this can also be accessed by clicking Organizer in the Window drop down). This dialog box gives you the option to both validate and distribute your app.
-Select “Validate App” and check both distribution options. Click “Automatically Manage Signing” and then “Validate”.
-Once the app is successfully validated, it is time to distribute the app. Click on Distribute app. Select App Store Connect, then upload.
-Once the upload is complete, go to appstoreconnect.apple.com and sign in with your developer account.
-Under My Apps, select SITA and go to the TestFlight tab. The app will be processing for 24-48 hours; however, once that is complete, click on the appropriate Build (in this case, it is Build 043) and invite testers via email.
-The testers will get an invitation link in their emails, and from there they can test the SITA app through the TestFlight iOS app.
+# SetUp 
 
+## End-user installation and setup: 
+1. Download the SITA iOS application from the Apple Store.
+2. Open the app and go into therapist mode.
+3. Input the correct code. 
+4. Click the settings icon on the bottom left and personalize settings as desired Default settings are the following:
+5. Exercises per reward: 3
+6. Max playtime reward: 20
+7. Repeats: 10
+8. Instruction volume: -20 dB
+9. Exercise start volume: -5 dB
+10. Target score: 50
+11. Playtime theme: Animals 
+12. Parent Lock: ON
+12. To record the first exercise, click: “Add Exercise”. Read the instructions and hit “Continue”. Enter a name for the exercise and then give SITA permission to access the phone’s microphone and camera.
 
-
-
+## Admin (developers)  installation and setup:
+1. Download Unity version 2020.1.8f and the iOS extension.
+2. Download Xcode.
+3. Clone the SITA repository in your local machine and open the project on Unity
+4. In build settings select iOS as the platform and “Latest version” in the “Run in Xcode” dropdown. Additionally, select run in Xcode as “Release”.
+5. Click on “Build” and select a folder to save the build file to a location on your disk.
+6. Upon successful completion of the build on Unity, open the project in Xcode and connect an iPhone to the computer.
+7. Select the iphone “Unity-Iphone > Device Name” at the top of the Xcode screen next to the build symbol. 
+8. Click on Unity-iPhone in the Project Navigator, and then click on Signing & Capabilities. Under All, check “Automatically manage signing,” as this will handle all of the Signing Certificates and Provisioning Profiles that are necessary to build to the device.
+9. Next, log into the Apple Developer account associated with this project and select ImagiRation LLC under the Team dropdown. Once this is complete, unlock your iPhone, build the project using the Play button, and it will run on your device.
+10. If desired the app can be internally tested through Testflight:
+11. In Xcode, open the project and make sure the target is set to Unity-iPhone.
+12. Under Signing & Capabilities, add the Push Notifications capability.
+13. Under General, increment the Build number by 1. For example, if the build number is set at 042, change it to 043.
+14. In the Product dropdown menu at the top of the screen, click on “Archive”. Xcode will now begin archiving the project; this is a necessary step for uploading the app to TestFlight.
+15. Upon successful completion of archiving the app, a dialog box pops up (this can also be accessed by clicking Organizer in the Window drop down). This dialog box gives you the option to both validate and distribute your app.
+16. Select “Validate App” and check both distribution options. Click “Automatically Manage Signing” and then “Validate”. 
+17. Once the app is successfully validated, it is time to distribute the app. Click on Distribute app. Select App Store Connect, then upload. 	
+18. Once the upload is complete, go to appstoreconnect.apple.com and sign in with your developer account. 
+19. Under My Apps, select SITA and go to the TestFlight tab. The app will be processing for 24-48 hours; however, once that is complete, click on the appropriate Build (in this case, it is Build 043) and invite testers via email.
+20. The testers w
